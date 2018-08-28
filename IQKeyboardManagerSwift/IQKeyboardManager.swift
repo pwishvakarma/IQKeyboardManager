@@ -1143,7 +1143,9 @@ public class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                                 self.showLog("Remaining Move: \(move)")
                                 
                                 scrollView.contentOffset = CGPoint(x: scrollView.contentOffset.x, y: shouldOffsetY)
-                            }) { (animated:Bool) -> Void in }
+                            }) { (animated:Bool) -> Void in
+                                scrollView.contentOffset = CGPoint(x: scrollView.contentOffset.x, y: shouldOffsetY)
+                            }
                         }
                         
                         //  Getting next lastView & superScrollView.
